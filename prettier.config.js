@@ -15,7 +15,6 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-
   arrowParens: 'always',
 
   importOrder: [
