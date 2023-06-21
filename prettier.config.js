@@ -1,12 +1,11 @@
 module.exports = {
-  plugins: [require('prettier-plugin-tailwindcss')],
   bracketSpacing: true,
   endOfLine: 'lf',
   htmlWhitespaceSensitivity: 'css',
   insertPragma: false,
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 120,
+  printWidth: 80,
   proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
@@ -16,7 +15,8 @@ module.exports = {
   trailingComma: 'all',
   useTabs: false,
   arrowParens: 'always',
-
+  
+  // plugins: [require('prettier-plugin-tailwindcss')],
   importOrder: [
     '^(react/(.*)$)|^(react$)',
     '^next',

@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
 
 import MovieContainer from '@/containers/movie';
-import Movies from '@/mocks/movies.json';
+import { tmdbGetSingleMovie } from '@/services/tmdb.service';
 
-const MoviePage = ({ params }) => {
-  const selectedMovieDetail = Movies.results.find((movie) => movie.id === Number(params.id));
+const MoviePage = async ({ params, searchParams }) => {
+  const selectedMovieDetail = await tmdbGetSingleMovie(params.id);
 
   if (!selectedMovieDetail) {
     notFound();
