@@ -43,7 +43,7 @@ export const tmdbGetSingleCategory = async (genreId) => {
 
 export const tmdbGetSingleMovie = async (movieId) => {
   try {
-    const res = await fetch(`${API_URL}/movie/${movieId}11`, options);
+    const res = await fetch(`${API_URL}/movie/${movieId}`, options);
     if (!res.ok) {
       throw new Error(`Error ${res.status}: ${res.statusText}`);
     }
